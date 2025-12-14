@@ -2,7 +2,6 @@ import os
 import cv2
 import numpy as np
 import plotly.express as px
-import plotly.graph_objs as go
 from collections import Counter, defaultdict
 from tqdm import tqdm
 
@@ -62,14 +61,6 @@ class HeroLeaderboardAnalyzer:
         return all_detected_heroes
     
     def analyze_and_visualize(self):
-        # Manual adjustments for the top 3 players' heroes
-        manual_adjustments = {
-            'itu': 2,
-            'kotl': 2,
-            'widow': 1,
-            'lord_gideon': 2,
-            'xiang_tzu': 1
-        }
         
         # Detect heroes
         detected_heroes = self.detect_heroes_in_leaderboard()
